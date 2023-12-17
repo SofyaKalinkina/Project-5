@@ -18,7 +18,7 @@
 
 2. Скопируйте код для выполнения процесса очистки номеров телефонов из файла и сохранения результата:
 
-import gdown
+`import gdown
 
 import pandas as pd
 
@@ -47,7 +47,7 @@ import pandas as pd
 df = pd.read_excel('cleaned_phones.xlsx')
 
 # Вывод всех строк DataFrame
-print(df)
+print(df)`
 
 3. Запустите код и получите результат, при необходимости замените ссылку на ваш файл .xlsx
 
