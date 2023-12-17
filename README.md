@@ -18,21 +18,21 @@
 
 2. Скопируйте код для выполнения процесса очистки номеров телефонов из файла и сохранения результата:
 
-`import gdown
+`import gdown`
 
-import pandas as pd
+`import pandas as pd`
 
 # Загрузка файла .xlsx из Google Drive
-url = 'https://docs.google.com/spreadsheets/d/1kS6TIiR8bNG-4jtAa_1VCH3Xtsvxyr9P/edit?usp=sharing&ouid=113706080460613369715&rtpof=true&sd=true'
-output = 'phone_numbers.xlsx'
-gdown.download(url, output, quiet=False)
+`url = 'https://docs.google.com/spreadsheets/d/1kS6TIiR8bNG-4jtAa_1VCH3Xtsvxyr9P/edit?usp=sharing&ouid=113706080460613369715&rtpof=true&sd=true'
+output = 'phone_numbers.xlsx'`
+`gdown.download(url, output, quiet=False)`
 
 # Чтение данных из файла .xlsx
-df = pd.read_excel('phone_numbers.xlsx')
+`df = pd.read_excel('phone_numbers.xlsx')`
 
 # Функция для очистки номеров телефонов
-def clean_phone(phone):
-    return ''.join(filter(str.isdigit, str(phone)))
+`def clean_phone(phone):`
+    `return ''.join(filter(str.isdigit, str(phone)))`
 
 # Очистка номеров телефонов от ненужных символов
 df['phone_number'] = df['phone_number'].apply(clean_phone)
