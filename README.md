@@ -35,19 +35,19 @@ output = 'phone_numbers.xlsx'`
     `return ''.join(filter(str.isdigit, str(phone)))`
 
 # Очистка номеров телефонов от ненужных символов
-df['phone_number'] = df['phone_number'].apply(clean_phone)
+`df['phone_number'] = df['phone_number'].apply(clean_phone)`
 
 # Сохранение очищенных данных в новый файл .xlsx
-cleaned_file = 'cleaned_phones.xlsx'
-df.to_excel(cleaned_file, index=False)
+`cleaned_file = 'cleaned_phones.xlsx'`
+`df.to_excel(cleaned_file, index=False)`
 
-import pandas as pd
+`import pandas as pd`
 
 # Загрузка файла Excel в DataFrame
-df = pd.read_excel('cleaned_phones.xlsx')
+`df = pd.read_excel('cleaned_phones.xlsx')`
 
 # Вывод всех строк DataFrame
-print(df)`
+`print(df)`
 
 3. Запустите код и получите результат, при необходимости замените ссылку на ваш файл .xlsx
 
